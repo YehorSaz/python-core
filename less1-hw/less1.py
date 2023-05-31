@@ -78,7 +78,6 @@
 ###################################################################################
 
 
-
 # - створити функцію яка приймає три числа та виводить та повертає найбільше.
 # Resolve:
 
@@ -96,13 +95,11 @@
 
 # def min_max_numbers(*args: int):
 #     nums = [*args]
-#     print(sorted(nums)[-1])
-#     return sorted(nums)[0]
+#     return min(nums)
 #
 #
-# min_max_numbers(3, 57, 153, 45, 453, 13)
+# min_max_numbers(3, 57, 153, 45, -3, 453, 13)
 ###################################################################################
-
 
 
 # - створити функцію яка повертає найбільше число з ліста
@@ -112,12 +109,11 @@
 #
 #
 # def max_num(l):
-#     return sorted(l)[-1]
+#     return max(l)
 #
 #
 # max_num(num_list)
 ###################################################################################
-
 
 
 # - створити функцію яка повертає найменьше число з ліста
@@ -133,18 +129,13 @@
 ###################################################################################
 
 
-
-
 # - створити функцію яка приймає ліст чисел та складає значення елементів ліста та повертає його.
 # Resolve:
 # num_list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
 #
 #
 # def num_sum(l):
-#     numbers_sum = 0
-#     for i in num_list:
-#         numbers_sum = numbers_sum + i
-#     return numbers_sum
+#     return sum(l)
 #
 #
 # print(num_sum(num_list))
@@ -176,40 +167,45 @@
 
 # Resolve:
 
-
-num_list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
-
-
-def menu():
-    choice = input(
-        'Дан list: [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]\n'
-        '1. - знайти мін число\n'
-        '2. - видалити усі дублікати\n'
-        '3. - замінити кожне 4-те значення на X\n'
-        '4. -вивести на екран пустий квадрат з "*" сторона якого вказана як аргумент функції\n'
-        '5. -вивести табличку множення за допомогою циклу while\n'
-        'зробіть вибір: '
-    )
-    if choice == '1':
-        print(f'мінімальне число: {sorted(num_list)[0]}')
-    elif choice == '2':
-        print(list(set(num_list)))
-    elif choice == '3':
-        for i in range(3, len(num_list), 4):
-            num_list[i] = 'X'
-        print(num_list)
-    elif choice == '4':
-        side = int(input('введіть розмір сторони: '))
-        for i in range(1, side + 1):
-            if i == 1 or i == side:
-                print('* ' * side)
-            else:
-                print('*' + '  ' * (side - 2) + ' *')
-    elif choice == '5':
-        for i in range(1, 10):
-            for j in range(1, 10):
-                print(f' {i * j:2}', end=' ')
-            print()
-
-
-menu()
+#
+# num_list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+#
+#
+# def menu():
+#     choice = input(
+#         'Дан list: [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]\n'
+#         '1. - знайти мін число\n'
+#         '2. - видалити усі дублікати\n'
+#         '3. - замінити кожне 4-те значення на X\n'
+#         '4. -вивести на екран пустий квадрат з "*" сторона якого вказана як аргумент функції\n'
+#         '5. -вивести табличку множення за допомогою циклу while\n'
+#         'зробіть вибір: '
+#     )
+#     if choice == '1':
+#         print(f'мінімальне число: {sorted(num_list)[0]}')
+#     elif choice == '2':
+#         print(list(set(num_list)))
+#     elif choice == '3':
+#         for i in range(3, len(num_list), 4):
+#             num_list[i] = 'X'
+#         print(num_list)
+#     elif choice == '4':
+#         side = int(input('введіть розмір сторони: '))
+#         for i in range(1, side + 1):
+#             if i == 1 or i == side:
+#                 print('* ' * side)
+#             else:
+#                 print('*' + '  ' * (side - 2) + ' *')
+#     elif choice == '5':
+#         num1 = 1
+#         num2 = 1
+#         while num1 < 10:
+#             while num2 < 10:
+#                 print(f'{num1 * num2:2}', end=' ' )
+#                 num2 += 1
+#             print()
+#             num1 += 1
+#             num2 = 1
+#
+#
+# menu()
