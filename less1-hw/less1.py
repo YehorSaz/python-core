@@ -169,44 +169,49 @@
 # Resolve:
 
 #
-# num_list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+num_list = [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]
+
+
 #
-#
-# def menu():
-#     choice = input(
-#         'Дан list: [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]\n'
-#         '1. - знайти мін число\n'
-#         '2. - видалити усі дублікати\n'
-#         '3. - замінити кожне 4-те значення на X\n'
-#         '4. -вивести на екран пустий квадрат з "*" сторона якого вказана як аргумент функції\n'
-#         '5. -вивести табличку множення за допомогою циклу while\n'
-#         'зробіть вибір: '
-#     )
-#     if choice == '1':
-#         print(f'мінімальне число: {sorted(num_list)[0]}')
-#     elif choice == '2':
-#         print(list(set(num_list)))
-#     elif choice == '3':
-#         for i in range(3, len(num_list), 4):
-#             num_list[i] = 'X'
-#         print(num_list)
-#     elif choice == '4':
-#         side = int(input('введіть розмір сторони: '))
-#         for i in range(1, side + 1):
-#             if i == 1 or i == side:
-#                 print('* ' * side)
-#             else:
-#                 print('*' + '  ' * (side - 2) + ' *')
-#     elif choice == '5':
-#         num1 = 1
-#         num2 = 1
-#         while num1 < 10:
-#             while num2 < 10:
-#                 print(f'{num1 * num2:2}', end=' ' )
-#                 num2 += 1
-#             print()
-#             num1 += 1
-#             num2 = 1
-#
-#
-# menu()
+
+def menu():
+    while True:
+        choice = input(
+            'Дан list: [22, 3, 5, 2, 8, 2, -23, 8, 23, 5]\n'
+            '1. - знайти мін число\n'
+            '2. - видалити усі дублікати\n'
+            '3. - замінити кожне 4-те значення на X\n'
+            '4. -вивести на екран пустий квадрат з "*" сторона якого вказана як аргумент функції\n'
+            '5. -вивести табличку множення за допомогою циклу while\n'
+            'зробіть вибір: '
+        )
+        if choice == '1':
+            print(f'мінімальне число: {sorted(num_list)[0]}')
+        elif choice == '2':
+            print(list(set(num_list)))
+        elif choice == '3':
+            for i in range(3, len(num_list), 4):
+                num_list[i] = 'X'
+            print(num_list)
+        elif choice == '4':
+            side = int(input('введіть розмір сторони: '))
+            for i in range(1, side + 1):
+                if i == 1 or i == side:
+                    print('* ' * side)
+                else:
+                    print('*' + '  ' * (side - 2) + ' *')
+        elif choice == '5':
+            num1 = 1
+            num2 = 1
+            while num1 < 10:
+                while num2 < 10:
+                    print(f'{num1 * num2:2}', end=' ')
+                    num2 += 1
+                print()
+                num1 += 1
+                num2 = 1
+        elif choice == '9':
+            break
+
+
+menu()
