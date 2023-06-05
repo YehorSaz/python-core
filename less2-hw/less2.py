@@ -30,10 +30,10 @@
 
 # створити функцію котра буде повертати сумму розрядів числа у вигляді строки (також використовуемо типізацію)
 
-# number = input(str('enter number: '))
+# number = int(input('enter number: '))
 
 
-# def digit(num: str | int) -> list[int]:
+# def digit(num: int) -> list[int]:
 #     res = []
 #     num = str(num)
 #     divider = int('1' + ('0' * (len(num) - 1)))
@@ -51,7 +51,7 @@
 #     return res
 #
 #
-# digit()
+# digit(number)
 
 ##############################################################################
 
