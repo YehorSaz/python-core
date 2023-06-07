@@ -55,6 +55,47 @@
 # в класі попелюшки має бути count який буде зберігати кількість створених екземплярів классу
 # також має бути метод классу який буде виводити це значення
 
+#-------------------------------------------------------------------
+# class Human:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#
+# class Cinderella(Human):
+#     __count = 0
+#
+#     def __init__(self, name, age, foot_size):
+#         super().__init__(name, age)
+#         self.foot_size = foot_size
+#         Cinderella.__count += 1
+#
+#     @classmethod
+#     def get_count(cls):
+#         print(cls.__count)
+#
+#
+# class Prince(Human):
+#     def __init__(self, name, age, shoe_size):
+#         super().__init__(name, age)
+#         self.shoe_size = shoe_size
+#
+#     def find_cinderella(self, cinderellas: list[Cinderella]):
+#         for cinderella in cinderellas:
+#             if self.shoe_size == cinderella.foot_size:
+#                 print(cinderella.__dict__)
+#                 return
+#         print('Not found!!!')
+#
+#
+# cinderellas = [
+#     Cinderella('Olha', 20, 35),
+#     Cinderella('Kamila', 30, 36),
+#     Cinderella('Marina', 20, 32),
+#     Cinderella('Albina', 20, 45),
+# ]
+#---------------------------------------------------------------------
+
 
 # class Human:
 #     cinderellas = []
